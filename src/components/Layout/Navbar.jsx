@@ -80,7 +80,7 @@ export default function Navbar() {
           </ul>
           <NavLink
             to="/sign In"
-            className="block bg-sky-500  hover:bg-sky-300 font-serif text-white px-4 py-2 rounded-full text-sm"
+            className="block bg-sky-500  hover:bg-sky-300 font-serif text-white px-4 py-2 rounded-full text-sm sm:w-auto text-center"
           >
             Sign In
           </NavLink>
