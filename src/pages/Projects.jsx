@@ -1,11 +1,13 @@
 import React from 'react'
+import ProjectMainSection from '../components/ProjectsSections/ProjectMainSection'
 
 const Projects = () => {
   return (
     <div>
-      <h1>Projects</h1>
+      <ProjectMainSection/>
     </div>
   )
 }
 
 export default Projects
+
