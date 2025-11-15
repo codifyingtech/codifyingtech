@@ -2,6 +2,13 @@
 import Home from './pages/Home';
 import { Route, Routes } from 'react-router-dom';
 import Projects from './pages/Projects';
+
+import Contactus from './pages/Contactus';
+
+
+
+
+
 import Layout from './components/Layout/Layout';
 import Notfound from './pages/404-Notfound';
 function App() {
@@ -11,6 +18,9 @@ function App() {
         <Route element={<Layout />}>
           <Route path='/' element={<Home />} />
           <Route path='/projects' element={<Projects />} />
+          
+          App.js: <Route path='/contact' element={<Contactus />} />
+
         <Route path='*' element={<Notfound />} />
         </Route>
       </Routes>
