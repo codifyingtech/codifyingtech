@@ -45,7 +45,7 @@ const WhyChooseUs = () => {
             WHY CHOOSE US
           </p>
           <h2 className="text-4xl md:text-5xl font-extrabold leading-tight">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+            <span className="text-4xl font-bold text-white font-serif mb-4 text-transparent bg-clip-text">
               Excellence That Sets Us Apart
             </span>
           </h2>
@@ -60,18 +60,21 @@ const WhyChooseUs = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-[#1a2b3c] p-8 rounded-xl shadow-lg flex flex-col items-start 
-                         border border-transparent hover:border-blue-500 transition-all duration-300 transform hover:scale-[1.02]"
+      className="w-[90%] sm:w-[80%] md:w-full mx-auto flex flex-col items-center bg-white backdrop-blur-md border border-white/20 p-4 rounded-xl shadow-md hover:shadow-lime-50 transition duration-300 transform hover:scale-110 cursor-pointer"
+
+              // className="bg-[#1a2b3c] p-8 rounded-xl shadow-lg flex flex-col items-start 
+              //            border border-transparent hover:border-blue-500 transition-all duration-300 transform hover:scale-[1.02]"
             >
               {/* Icon Container */}
               <div className="mb-6">
-                <div className="bg-gradient-to-r from-blue-400 to-purple-500 p-3 rounded-full text-2xl text-white">
+                <div className="text-[#154d71] text-4xl mb-4">
+                {/* <div className="bg-gradient-to-r from-blue-400 to-purple-500 p-3 rounded-full text-2xl text-white"> */}
                   <feature.icon />
                 </div>
               </div>
-              
-              <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
-              <p className="text-gray-300 text-base">{feature.description}</p>
+           <h3 className="   text-lg font-semibold  text-[#154d71] uppercase">{feature.title}</h3>
+             
+              <p className=" text-[#154d71] text-base">{feature.description}</p>
             </div>
           ))}
         </div>
