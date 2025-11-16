@@ -14,7 +14,7 @@ const ProjectMainSection = () => {
       <h1 className='animate__animated animate__backInDown text-4xl flex h-[45%] items-center md:text-5xl text-gray-700  font-semibold tracking-wide leading-snug text-center'>We build<br />Products,brands,and <br /> Experience.</h1>
       
        {/* Cicular text Animation */}
-      <div className='flex items-center z-10 justify-center  absolute bottom-10 md:bottom-25 right-25 h-[100px] w-[100px] rounded-full'>
+      <div className='hidden md:flex  items-center z-10 justify-center  absolute bottom-10 md:bottom-25 right-25 h-[100px] w-[100px] rounded-full'>
         <CircularText
          text="*SCROLL*DOWN*SCROLL*DOWN"
           onHover="speedUp"
