@@ -1,5 +1,5 @@
 import React from 'react';
-// Zaroori icons ko import kiya gaya hai
+
 import { FaBullseye, FaBolt, FaShieldAlt, FaUsers, FaAward, FaChartLine } from 'react-icons/fa';
 
 const features = [
