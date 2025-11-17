@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const brands = [
   { letter: "T", name: "TechCorp", category: "Technology" },
@@ -13,12 +13,16 @@ const brands = [
 ];
 
 export default function TrustedBrands() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <div className="min-h-screen w-full bg-gradient-to-b from-[#e8f7ff] via-white to-[#e8f7ff] px-6 py-20">
+    <div ref={ref} className="min-h-screen w-full px-6 py-20">
       <div className="max-w-6xl mx-auto text-center">
+        
         <motion.h1
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: 20, opacity: 0 }}
+          animate={isInView ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-5xl font-extrabold text-gray-900"
         >
@@ -27,7 +31,7 @@ export default function TrustedBrands() {
 
         <motion.p
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.3, duration: 0.6 }}
           className="mt-4 text-gray-600 max-w-2xl mx-auto text-lg"
         >
@@ -39,6 +43,9 @@ export default function TrustedBrands() {
           {brands.map((b, index) => (
             <motion.div
               key={index}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ scale: 1.05, y: -5 }}
               className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center border border-gray-100 hover:shadow-xl transition-all"
             >
