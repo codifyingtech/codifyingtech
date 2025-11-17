@@ -40,13 +40,6 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* CTA Button */}
-        <NavLink
-          to="/signin"
-          className="hidden md:block bg-sky-500 hover:bg-sky-300 font-serif text-white px-4 py-2 rounded-full text-sm"
-        >
-          Sign In
-        </NavLink>
 
         {/* Mobile Toggle */}
         <button
