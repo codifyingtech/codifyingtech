@@ -18,11 +18,11 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path='/' element={<Home />} />
-          <Route path='/projects' element={<Projects />} />
+          <Route path='/Projects' element={<Projects />} />
           
-          <Route path='/team' element={<Ourteams/>} />
+          <Route path='/OurTeam' element={<Ourteams/>} />
           
-          App.js: <Route path='/contact' element={<Contactus />} />
+          App.js: <Route path='/ContactUs' element={<Contactus />} />
 
         <Route path='*' element={<Notfound />} />
         </Route>
